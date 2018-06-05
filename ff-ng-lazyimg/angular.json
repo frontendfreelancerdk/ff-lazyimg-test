@@ -121,6 +121,46 @@
           }
         }
       }
+    },
+    "ng-ff-lazyimg": {
+      "root": "projects/ng-ff-lazyimg",
+      "sourceRoot": "projects/ng-ff-lazyimg/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-ff-lazyimg/tsconfig.lib.json",
+            "project": "projects/ng-ff-lazyimg/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ng-ff-lazyimg/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-ff-lazyimg/src/test.ts",
+            "tsConfig": "projects/ng-ff-lazyimg/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-ff-lazyimg/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-ff-lazyimg/tsconfig.lib.json",
+              "projects/ng-ff-lazyimg/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ff-ng-lazyimg"

@@ -15,6 +15,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-ff-lazyimg": [
+        "dist/ng-ff-lazyimg"
+      ],
+      "ng-ff-lazyimg/*": [
+        "dist/ng-ff-lazyimg/*"
+      ]
+    }
   }
 }
